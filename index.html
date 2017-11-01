@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8">
+    <title>Web dictionary </title>
+    <link rel="stylesheet" href="webdict.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script src="webdict.js" type="text/javascript"></script>
+  </head>
 <body>
-
-<button id="searchButton" type="button">Search</button>
-<script>
-
-
- var url= "/request.php?q=definition"; 
-  document.getElementById("searchButton").addEventListener('click', searching);
-
-  function searching() {
+<div class = "container">
+  <div class="jumbotron jumbotron-billboard">
+    <div class="img"></div>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1>Web Dictionary</h1>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div>
+    <br>
+    <h3>Search for e.g: ajax, definition, bar, html, css, javscript or
+php</h3>
+<br>
+   
+    <input type="text" id="query" placeholder="Type a word "/>
+    <button id="searchButton" type="submit" value= "Search">Search</button>
     
-    var httpRequest = new XMLHttpRequest();
-
-    if (!httpRequest) {
-      alert('Giving up :( Cannot create an XMLHTTP instance');
-      return false;
-    }
-    httpRequest.onreadystatechange = function(){
-      if (httpRequest.readyState === XMLHttpRequest.DONE) {
-      if (httpRequest.status === 200) {
-        alert(httpRequest.responseText);
-      } else {
-        alert('There was a problem with the request.');
-      }
-    }
-    };
-    httpRequest.open('GET', url,true);
-    httpRequest.send();
-  }
-  
-</script>
-
+  </div>
+  <br>
+  <h2>Result</h2>
+  <div id ="result"></div>
+</div>      
 </body>
 </html> 
