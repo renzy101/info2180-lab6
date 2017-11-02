@@ -19,6 +19,16 @@
   z-index:2;
 }
 
-
+ body {
+        background: #6666ff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpi/P//PwM6YGLAAuCCmpqacC2MRGsHCDAA+fIHfeQbO8kAAAAASUVORK5CYII=);
+        font: 13px 'Lucida sans', Arial, Helvetica;
+        color: #eee;
+        text-align: left;
+    }
+    
+    a {
+        color: #ccc;
+    }
+    
 
 
